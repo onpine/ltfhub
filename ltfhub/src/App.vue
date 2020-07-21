@@ -1,16 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
+      <Navigation />
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>-->
-      <router-view />
     </div>
-    <first />
-    <Next />
-    <Next2 />
-    <Next3 />
-    <Fans />
-    <Footer />
+    <router-view />
   </div>
 </template>
 
@@ -45,7 +40,7 @@ body {
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #757575;
     }
   }
 }
@@ -68,22 +63,11 @@ window.addEventListener("scroll", function() {
 </script>
 
 <script>
-import First from "./views/First";
-import Next from "./views/Next";
-import Next2 from "./views/Next2";
-import Next3 from "./views/Next3";
-import Fans from "./views/Fans";
-import Footer from "./views/Footer";
+import Navigation from "@/components/Navigation";
 export default {
   name: "app",
   components: {
-    First,
-    Next,
-    Next2,
-    Next3,
-    Fans,
-
-    Footer
+    Navigation
   },
   data() {
     return {};
